@@ -16,15 +16,37 @@ const getUserChoice = (userInput) => {
 
 // Получение выбора компьютера
 
-const getComputerChoice = () => {
-    let rand = Math.floor(Math.random() * 3) // получение случайного числа от 0 до 2
+/* const getComputerChoice = () => {
+    let randChoice = Math.floor(Math.random() * 3) // получение случайного числа от 0 до 2
     // Замена случайных чисел на строчные значения выбора
-    if (rand === 0) {
+    if (randChoice === 0) {
         return "камень";
-    } else if (rand === 1) {
+    } else if (randChoice === 1) {
         return "ножницы";
-    } else if (rand === 2) {
+    } else if (randChoice === 2) {
         return "бумага";
+    }
+}
+
+*/
+
+// switch версия
+
+const getComputerChoice = () => {
+    let randChoice = Math.floor(Math.random() * 3);
+    switch (randChoice) {
+        case 0:
+            return "камень"
+            break;
+        case 1:
+            return "ножницы"
+            break;
+        case 3:
+            return "бумага"
+            break;
+        default:
+            return "Ошибка в выборе компьютера"
+            break;
     }
 }
 
